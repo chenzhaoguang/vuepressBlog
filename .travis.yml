@@ -11,7 +11,7 @@ after_script:
 - git init
 - git add -A
 - git commit -m 'deploy'
-- git push -f "https://${GITHUB_TOKEN}@${GH_REF}" master
+- git push -f "https://${GITHUB_TOKEN}@${GH_REF}" main
 branches:
   only:
   - master
