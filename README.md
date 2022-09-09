@@ -1,2 +1,3 @@
-# vuepressBlog
-vuepress &amp; github actions
+# blog
+
+vuepress & github actions
