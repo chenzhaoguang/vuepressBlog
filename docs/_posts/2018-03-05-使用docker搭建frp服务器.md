@@ -16,10 +16,10 @@ tags:
 ## 准备工作
 -  具有外网ip的服务器
 - 域名
-> 我这里是准备了一个子域名，*.frp.thyiad.top，把这这个域名解析到服务器，这样可以支持同时映射多个域名到外网，具体的子域名在frp客户端配置，服务端配置前缀域名为frp.thyiad.top
+> 我这里是准备了一个子域名，*.frp.keepjs.com，把这这个域名解析到服务器，这样可以支持同时映射多个域名到外网，具体的子域名在frp客户端配置，服务端配置前缀域名为frp.keepjs.com
 
 - docker
-> 需要注意的是，我这里是基于ngin-proxy镜像来解析域名的，此处不再赘述，可参照之前的文章：[使用docker搭建wordpress](https://www.thyiad.top/2018/02/28/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAwordpress/)
+> 需要注意的是，我这里是基于ngin-proxy镜像来解析域名的，此处不再赘述，可参照之前的文章：[使用docker搭建wordpress](https://www.keepjs.com/2018/02/28/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAwordpress/)
 
 ## docker file
 > 镜像已经上传到docker的hub上了，所以你也可以跳过docker file直接使用compose
@@ -47,7 +47,7 @@ dashboard_port = 7500
 dashboard_user = admin
 dashboard_pwd = admin
 authentication_timeout = 0
-subdomain_host = frp.thyiad.top
+subdomain_host = frp.keepjs.com
 ```
 创建dockerfile：
 ``` bash
@@ -116,7 +116,7 @@ services:
       - frp_conf:/var/frp/conf
     restart: always
     environment:
-      VIRTUAL_HOST: '*.frp.thyiad.top,frp.thyiad.top'   # 指定需要绑定的域名
+      VIRTUAL_HOST: '*.frp.keepjs.com,frp.keepjs.com'   # 指定需要绑定的域名
 
 volumes:
     frp_conf:
@@ -131,7 +131,7 @@ networks:
 docker-compose up -d
 ```
 此时，我们的frp服务器就已经OK了。
-我们访问一下test.frp.thyiad.top试试：
+我们访问一下test.frp.keepjs.com试试：
 ![](https://static.yirenyian.com/blog/frp-unvisible.png)
 显然，frp已经在运转了，只是该域名并没有绑定转发
 
@@ -159,12 +159,12 @@ frpc
 此时会出现以下界面：
 ![](https://static.yirenyian.com/blog/frp-running.png)
 
-说明已经连接成功了，我们再来访问test.frp.thyiad.top试试：
+说明已经连接成功了，我们再来访问test.frp.keepjs.com试试：
 ![](https://static.yirenyian.com/blog/frp-visible.png)
 
 此时，我们的frp就已经搭建好了，很简单吧？
 > ngrok的服务器搭建在这里：
-> [使用docker搭建ngrok服务器](https://www.thyiad.top/2018/03/01/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAngrok%E6%9C%8D%E5%8A%A1%E5%99%A8/)
+> [使用docker搭建ngrok服务器](https://www.keepjs.com/2018/03/01/%E4%BD%BF%E7%94%A8docker%E6%90%AD%E5%BB%BAngrok%E6%9C%8D%E5%8A%A1%E5%99%A8/)
 
 以上文件已经上传到github：
 [https://github.com/Thyiad/docker](https://github.com/Thyiad/docker)

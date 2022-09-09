@@ -26,7 +26,7 @@ tags:
 > https用的证书，我是在腾讯云免费申请的，地址为：[腾讯云证书管理](https://console.cloud.tencent.com/ssl)，此处就不详细描述申请过程了，很简单的
 
 - Docker
-> 这里要注意，centos中不要直接使用yum install docker，yum中的是旧的docker版本，升级参考我的这篇博文：[CentOS更新Docker至最新版本](https://www.thyiad.top/2017/12/29/centos-upgrade-docker/)
+> 这里要注意，centos中不要直接使用yum install docker，yum中的是旧的docker版本，升级参考我的这篇博文：[CentOS更新Docker至最新版本](https://www.keepjs.com/2017/12/29/centos-upgrade-docker/)
 
 - Docker Compose
 > compose原本是一个第三方公司写的，用来在docker中定义和运行复杂应用的小工具，后来被docker收购了，正式用来替代最早的fig。
@@ -77,7 +77,7 @@ services:
        - 80
      restart: always
      environment:
-       VIRTUAL_HOST: www.thyiad.top,thyiad.top
+       VIRTUAL_HOST: www.keepjs.com,keepjs.com
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
        WORDPRESS_DB_PASSWORD: wordpress
@@ -109,11 +109,11 @@ docker volume ls
 # 查询出xxx_wp_certs的真实路径，一般是在 /var/lib/docker/volumes/xxx_wp_certs/_data
 docker volume inspect --format '{{ .Mountpoint }}' xxx_wp_certs
 
-# 创建www.thyiad.top.key，并且把ssl证书的xxx.key内容复制粘贴进来
-cd /var/lib/docker/volumes/xxx_wp_certs/_data && sudo vim www.thyiad.top.key
+# 创建www.keepjs.com.key，并且把ssl证书的xxx.key内容复制粘贴进来
+cd /var/lib/docker/volumes/xxx_wp_certs/_data && sudo vim www.keepjs.com.key
 
-# 创建www.thyiad.top.crt，并且把ssl证书的xxx.crt内容复制粘贴进来
-cd /var/lib/docker/volumes/xxx_wp_certs/_data && sudo vim www.thyiad.top.crt
+# 创建www.keepjs.com.crt，并且把ssl证书的xxx.crt内容复制粘贴进来
+cd /var/lib/docker/volumes/xxx_wp_certs/_data && sudo vim www.keepjs.com.crt
 ``` 
 nginx-proxy如果发现在certs文件夹中存在当前域名的.crt和.key文件，将自动转为https协议
 

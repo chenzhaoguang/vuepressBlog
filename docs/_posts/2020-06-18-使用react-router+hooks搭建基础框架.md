@@ -15,7 +15,7 @@ tags:
 这个版本的代码[在这](https://github.com/Thyiad/react-ssr/tree/tag-v2)
 
 ## 步骤
-[前文](https://www.thyiad.top/_posts/2020-06-05-react+ts%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B.html)中已经配置好webpack了，接下来让我们配置react-router以及reducer
+[前文](https://www.keepjs.com/_posts/2020-06-05-react+ts%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B.html)中已经配置好webpack了，接下来让我们配置react-router以及reducer
 
 ### react-router
 先安装依赖：

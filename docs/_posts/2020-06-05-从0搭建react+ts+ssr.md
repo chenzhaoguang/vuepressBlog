@@ -18,9 +18,9 @@ vue和react的项目已经大大小小做过很多个了，基本都是基于cli
 ## 整体流程
 关于ssr在此就不再赘述了，说白了前端还是spa的项目，node端接管部分或全部路由做服务端渲染，整体上来说，分为以下3个步骤：
 
-- [react+ts搭建前端工程](https://www.thyiad.top/_posts/2020-06-05-react+ts%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B.html)
-- [react-router+hooks搭建前端基础架构](https://www.thyiad.top/_posts/2020-06-18-%E4%BD%BF%E7%94%A8react-router+hooks%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6.html)
+- [react+ts搭建前端工程](https://www.keepjs.com/_posts/2020-06-05-react+ts%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B.html)
+- [react-router+hooks搭建前端基础架构](https://www.keepjs.com/_posts/2020-06-18-%E4%BD%BF%E7%94%A8react-router+hooks%E6%90%AD%E5%BB%BA%E5%9F%BA%E7%A1%80%E6%A1%86%E6%9E%B6.html)
     > 既然从0搭了，那就抛弃redux，使用hooks+router从0搭建一下吧
-- [koa2+ts搭建node工程](https://www.thyiad.top/_posts/2020-07-07-koa+ts%E6%90%AD%E5%BB%BAssr%E5%90%8E%E7%AB%AF.html)
+- [koa2+ts搭建node工程](https://www.keepjs.com/_posts/2020-07-07-koa+ts%E6%90%AD%E5%BB%BAssr%E5%90%8E%E7%AB%AF.html)
 
 我们需要2个工程：前端spa，后端node，然后针对ssr的需要对两个工程进行改造。

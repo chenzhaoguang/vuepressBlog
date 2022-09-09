@@ -38,7 +38,7 @@ tags:
     - npm run build
     after_script:
     - cd dist
-    - echo 'www.thyiad.top' > CNAME
+    - echo 'www.keepjs.com' > CNAME
     - git init
     - git add -A
     - git commit -m 'deploy'
