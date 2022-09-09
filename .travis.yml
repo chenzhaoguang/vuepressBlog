@@ -7,7 +7,7 @@ script:
 - npm run build
 after_script:
 - cd dist
-- echo 'www.thyiad.top' > CNAME
+- echo 'www.keepjs.com' > CNAME
 - git init
 - git add -A
 - git commit -m 'deploy'
@@ -17,5 +17,5 @@ branches:
   - master
 env:
   global:
-    - GH_REF: github.com/Thyiad/thyiad.github.io.git
+    - GH_REF: github.com/chenzhaoguang/chenzhaoguang.github.io.git
     - secure: "MLhsT1Fr83+k3+mX5/WA9WDnTKMfff5+9fbWbdPX+SZOCG0uAp8cSdDZpcgh3VpafExHYk8PF0bAPGJqOe1dYQwVXSWeYeP7ETjsqk2aNS6nfq5QGiAqP/KnedBGVQn8LKpHDHk4oxKaNfjuQeUvSBt4lxAUFCVVjVTkv9yGKEaeJZXt7j79KFU+KqoKSzDRkHawduB3HB7FfyZmOWHHl6TjdCG6BBJ3ykYyuF6Q5PwjLW6TzBrl3k9pfd3ayNBrVS6IW644sw9zNPlLXO+kr2AaRQweTh05yR1mA/3YrYpaaIYg9ua66DTrzMwSMoKZ5ykwaifnL35NB0MyEwHZC90iHOUNlGRgpyVFwLphAHrGNJu+LUHlvlq2GHoEsizBpD0SHafJyAi2d1WycvoPTztfZ77FMTpEjJkGnTDAXdxo/5D0/ZEe0CmOWY3XsJyUZG6uAx+ySeDCNm2FsqWgZqpvr3P83yM6CI0/RP1fInTXjLfrbgfS49VcNJl3tS+i1I1O2afrBI3c1XL1UjnEenvcca65Yki2fakjbRW8ky0av/PqFFRfK8rKT37jJwJFKFdnD22KqYCpRO4SJHkyTDZen4BJputMXuuiQEoiZ7nh8ljtVXzo4A6hAYko+KT30BlSlG2asAnE0EEX6UraV8PvAxy9CUX4k4uVnVrkgOM="
